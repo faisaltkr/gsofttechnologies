@@ -1,4 +1,4 @@
-<a href="https://aimeos.org/">
+<a href="#">
     <img src="https://www.gsoftcomm.net/assets/webp/svg/logo.svg" alt="Aimeos logo" title="Aimeos"/>
 </a>
 
@@ -47,3 +47,10 @@ php artisan migrate
 php artisan serve
 ```
 
+## Example Screenshots
+
+<img src="public/images/screenshots/001.png" />
+<img src="public/images/screenshots/002.png" />
+<img src="public/images/screenshots/003.png" />
+<img src="public/images/screenshots/004.png" />
+<img src="public/images/screenshots/005.png" />
