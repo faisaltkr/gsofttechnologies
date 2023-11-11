@@ -22,7 +22,7 @@ class BankService {
             $data = [
                 'user_id' => auth()->id(),
                 'credit' => $request->amount,
-                'comment' => $request->amount . " is deposited",
+                'comment' => "Deposit",
             ];
             $this->create($data);
             $this->updateAccountBalace(auth()->id());
@@ -35,7 +35,7 @@ class BankService {
             $data = [
                 'user_id' => auth()->id(),
                 'debit' => $request->amount,
-                'comment' => $request->amount . " is withdrawn",
+                'comment' => "Withdraw",
             ];
             $this->create($data);
             $this->updateAccountBalace(auth()->id());
@@ -46,14 +46,14 @@ class BankService {
             $debited = [
                 'user_id' => auth()->id(),
                 'debit' => $request->amount,
-                'comment' => $request->amount . " is withdrawn",
+                'comment' => "Transfer to $request->email",
             ];
             $this->create($debited);
             $recipient = User::whereEmail($request->email)->first();
             $credited = [
                 'user_id' => $recipient->id,
                 'credit' => $request->amount,
-                'comment' => "Mr/Mrs ".auth()->user()->name." has deposited Rs".$request->amount . " into your account",
+                'comment' => "Transfer from ".auth()->user()->email,
             ];
 
             $this->create($credited);
