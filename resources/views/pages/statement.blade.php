@@ -29,9 +29,9 @@
                             @endphp
                            @foreach ($statements as $k=> $item)
                            @php
-                                if(request()->page!=1)
+                                if(request()->has('page') && request()->page!=1)
                                 {
-                                    $income = Session::get('income');
+                                    $income = getLastRecord($item->id);
                                 }
                                
                                $income += $item->credit;
@@ -45,7 +45,7 @@
                                 <td>{{ $item->comment }}</td>
                                 <td>{{ number_format($income,2) }}</td>
                             </tr>
-                            @php Session::put('income',$income) @endphp
+        
                            @endforeach
                         </tbody>
                         
