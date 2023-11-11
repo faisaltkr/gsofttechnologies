@@ -47,7 +47,7 @@ php artisan migrate
 php artisan serve
 ```
 
-## Example Screenshots
+## Screenshots
 
 <img src="public/images/screenshots/001.png" />
 <img src="public/images/screenshots/002.png" />
