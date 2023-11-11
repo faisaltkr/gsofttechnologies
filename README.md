@@ -1,5 +1,5 @@
 <a href="https://aimeos.org/">
-    <img src="public/images/2560px-BankABCLogo.png" alt="Aimeos logo" title="Aimeos"/>
+    <img src="https://www.gsoftcomm.net/assets/webp/svg/logo.svg" alt="Aimeos logo" title="Aimeos"/>
 </a>
 
 ### Clone the code
